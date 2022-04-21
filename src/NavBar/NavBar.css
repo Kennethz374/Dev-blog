@@ -1,0 +1,19 @@
+.NavBar_Container {
+	width: 100%;
+	height: 50px;
+	background-color: aquamarine;
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	font-family: "Raleway", sans-serif;
+}
+
+.left,
+.right {
+	flex: 3;
+}
+
+.center {
+	flex: 6;
+}
