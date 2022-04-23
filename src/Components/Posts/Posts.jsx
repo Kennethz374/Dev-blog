@@ -1,12 +1,12 @@
 import "./Posts.css"
-import SinglePost from "./SinglePost"
+import Post from "./Post"
 
 const Posts = () => {
     return (
         <div className="posts">
-            <SinglePost/>
-            <SinglePost/>
-            <SinglePost/>
+            <Post/>
+            <Post/>
+            <Post/>
        
         </div>
     )
