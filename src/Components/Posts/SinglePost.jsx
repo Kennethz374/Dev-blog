@@ -8,7 +8,7 @@ const SinglePost = () => {
            className="postImage"/>
 
             <div className="postInfo">
-                <div className="postCategories">
+                <div className="postCat">
                     <span className="postCategories">Tech</span>
                     <span className="postCategories">Life</span>
                 </div>
@@ -18,6 +18,10 @@ const SinglePost = () => {
 
                 <span className="postDate">1 hours ago</span>
             </div>
+            <p className="postDes">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error voluptates eum explicabo molestias blanditiis autem aliquid provident deleniti incidunt vero, cupiditate cumque! Labore facere quod eaque cumque, ratione eveniet voluptas!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error voluptates eum explicabo molestias blanditiis autem aliquid provident deleniti incidunt vero, cupiditate cumque! Labore facere quod eaque cumque, ratione eveniet voluptas!
+            </p>
         </div>
     )
 }

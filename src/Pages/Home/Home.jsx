@@ -6,7 +6,7 @@ import Posts from "../../Components/Posts/Posts"
 const Home = () => {
     return (
         <>
-            {/* <Header/> */}
+            <Header/>
         <div className="home">
             <Posts/>
             <Sidebar/>
