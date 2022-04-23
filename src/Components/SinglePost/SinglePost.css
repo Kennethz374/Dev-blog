@@ -18,4 +18,46 @@
 	text-align: center;
 	font-size: 28px;
 	font-family: "Nunito", sans-serif;
+	margin: 10px;
+}
+
+.singlePostEdit {
+	float: right;
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+.singlePostIcon {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+	color: green;
+}
+.singlePostIcon:last-child {
+	color: red;
+}
+
+.singlePostInfo {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	color: darkgrey;
+}
+
+.singlePostDate {
+	font-style: italic;
+}
+
+.singlePostDes {
+	color: #666;
+	font-size: 18px;
+}
+
+.singlePostDes::first-letter {
+	margin-left: 20px;
+	font-size: 30px;
+	font-weight: 600;
 }
