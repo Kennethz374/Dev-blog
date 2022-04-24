@@ -3,6 +3,7 @@ import Home from "./Pages/Home/Home";
 import Post from "./Pages/Post/Post";
 import Write from "./Pages/Write/Write";
 import UserProfile from "./Pages/UserProfile/UserProfile";
+import Login from "./Pages/Login/Login";
 
 function App() {
 	return (
@@ -11,7 +12,8 @@ function App() {
 			{/* <Home /> */}
 			{/* <Post /> */}
 			{/* <Write /> */}
-			<UserProfile />
+			{/* <UserProfile /> */}
+			<Login />
 		</div>
 	);
 }
