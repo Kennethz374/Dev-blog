@@ -6,8 +6,8 @@ const UserProfile = () => {
         <div className="settings">
             <div className="settingWrapper">
                 <div className="settingTitle">
-                    <span className="settingUpdateTitle">Update</span>
-                    <span className="settingUpdateTitle">Delete</span>
+                    <span className="settingUpdateTitle">Account Infomation</span>
+                    <span className="settingDeleteTitle">Delete</span>
                 </div>
                 <form className="settingForm">
                     <label>Profile Picture</label>
