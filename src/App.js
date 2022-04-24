@@ -4,6 +4,7 @@ import Post from "./Pages/Post/Post";
 import Write from "./Pages/Write/Write";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 function App() {
 	return (
@@ -13,7 +14,8 @@ function App() {
 			{/* <Post /> */}
 			{/* <Write /> */}
 			{/* <UserProfile /> */}
-			<Login />
+			{/* <Login /> */}
+			<Register />
 		</div>
 	);
 }

@@ -1,4 +1,4 @@
-.login {
+.register {
 	height: calc(100vh - 50px);
 	display: flex;
 	flex-direction: column;
@@ -8,25 +8,25 @@
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 0.5)
 		),
-		url("https://images.unsplash.com/photo-1537202108838-e7072bad1927?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2Zlc3NvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+		url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
 	background-size: cover;
 }
 
-.loginTitle {
+.registerTitle {
 	font-size: 50px;
 }
 
-.loginForm {
+.registerForm {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 }
 
-.loginForm > label {
+.registerForm > label {
 	margin: 10px 0;
 }
 
-.loginInput {
+.registerInput {
 	padding: 10px;
 	background-color: white;
 	border: none;
