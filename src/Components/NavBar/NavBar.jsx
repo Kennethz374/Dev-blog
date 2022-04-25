@@ -27,8 +27,10 @@ const NavBar = () => {
         
             <div className="right">
                 {user? (
-                    <img src="https://images.unsplash.com/photo-1611459293885-f8e692ab0356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="avatar"
-                className="right_image"/>
+                    <Link to="/profile" className="link">
+                        <img src="https://images.unsplash.com/photo-1611459293885-f8e692ab0356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="avatar"
+                    className="right_image"/>
+                    </Link>
             ):(
                 <ul className="centerList">
                     <li className="listItem">

@@ -9,7 +9,7 @@ import Register from "./Pages/Register/Register";
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-	const user = false;
+	const user = true;
 	//if no user login
 	return (
 		<div className="App">
