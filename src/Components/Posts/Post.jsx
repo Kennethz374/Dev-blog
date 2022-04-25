@@ -1,4 +1,5 @@
 import "./Post.css"
+import { Link } from "react-router-dom";
 // home page single post layout
 
 const Post = () => {
@@ -13,7 +14,9 @@ const Post = () => {
                     <span className="postCategories">Tech</span>
                     <span className="postCategories">Life</span>
                 </div>
-                <span className="postTitle">Lorem ipsum dolor sit amet </span>
+                <Link to="/post/123" className="link">
+                    <span className="postTitle">Lorem ipsum dolor sit amet </span>
+                </Link>
 
                 <hr/>
 
