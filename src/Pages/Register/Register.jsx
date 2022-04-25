@@ -14,11 +14,11 @@ const Register = () => {
                 <input type="password" className="registerInput" placeholder="Enter your password..."/>
                 <button className="registerButton"> Register </button>
             </form>
-            <button className="registerLoginButton">
                 <Link to="/login" className="link">
+                    <button className="registerLoginButton">
                         Login
+                    </button>
                 </Link>
-            </button>
         </div>
     )
 }

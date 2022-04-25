@@ -14,9 +14,11 @@ const Login = () => {
                         Login
                 </button>
             </form>
-            <button className="loginRegisterButton">
-                <Link to="/register" className="link">Register</Link>
-            </button>
+            <Link to="/register" className="link">
+                <button className="loginRegisterButton">
+                    Register
+                </button>
+            </Link>
         </div>
     )
 }
