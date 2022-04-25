@@ -1,12 +1,10 @@
 import React from 'react'
 import "./NavBar.css"
-import {
-  Link
-} from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 
 const NavBar = () => {
-    const user = true
+    const user = false
     return (
         <div className="NavBar_Container">
 
