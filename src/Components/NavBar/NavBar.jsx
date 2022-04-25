@@ -4,7 +4,7 @@ import {  Link } from "react-router-dom";
 
 
 const NavBar = () => {
-    const user = false
+    const user = true
     return (
         <div className="NavBar_Container">
 
