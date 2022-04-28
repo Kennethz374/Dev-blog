@@ -1,12 +1,12 @@
 import "./Posts.css"
 import Post from "./Post"
 
-const Posts = () => {
+const Posts = ({posts}) => {
     return (
         <div className="posts">
-            <Post/>
-            <Post/>
-            <Post/>
+            {posts.map(post=> {
+                return <Post post={post}/>
+            })}
        
         </div>
     )

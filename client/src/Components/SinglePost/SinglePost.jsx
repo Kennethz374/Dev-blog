@@ -1,12 +1,27 @@
 import "./SinglePost.css"
+import {useLocation} from "react-router"
+import {useEffect, useState} from "react"
+import axios from "axios"
 
 const SinglePost = () => {
+    const location =useLocation ()
+    const path = location.pathname.split("/")[2]
+    const [singlePost, setSinglePost] = useState({})
+
+    useEffect(()=>{
+        const getPost = async ()=>{
+            const res = await axios.get(`/posts/${path}`)
+            setSinglePost(res.data)
+        }
+        getPost()
+    },[path])
     return (
         <div className="singlePost">
             <div className="postWrapper">
-                <img src="https://images.unsplash.com/photo-1629904869742-6e8ccbd0f78b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2Zlc3NvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="postImg" className="singlePostImage"/>
+                {singlePost.photo && <img src={singlePost.photo} alt="postImg" className="singlePostImage"/>}
+                
                 <h1 className="singlePostTitle">
-                   Lorem ipsum dolor si
+                   {singlePost.title}
                     <div className="singlePostEdit">
                         <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
                         <i className="singlePostIcon fa-solid fa-trash-can"></i>
@@ -14,15 +29,12 @@ const SinglePost = () => {
                 </h1>
 
                 <div className="singlePostInfo">
-                    <span className="singlePostAuthor">Author: <b>Ken</b></span>
-                    <span className="singlePostDate">1 hour ago</span>
+                    <span className="singlePostAuthor">Author: <b>{singlePost.username}</b></span>
+                    <span className="singlePostDate">{new Date(singlePost.createdAt).toDateString()}</span>
                 </div>
 
                 <p className="singlePostDes">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit qui, excepturi adipisci deserunt ipsum dolore quos quia magni, ducimus quaerat nobis minus iure sed quisquam? Explicabo veritatis amet magni deserunt!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit qui, excepturi adipisci deserunt ipsum dolore quos quia magni, ducimus quaerat nobis minus iure sed quisquam? Explicabo veritatis amet magni deserunt!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit qui, excepturi adipisci deserunt ipsum dolore quos quia magni, ducimus quaerat nobis minus iure sed quisquam? Explicabo veritatis amet magni deserunt!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit qui, excepturi adipisci deserunt ipsum dolore quos quia magni, ducimus quaerat nobis minus iure sed quisquam? Explicabo veritatis amet magni deserunt!
+                    {singlePost.desc}
                 </p>
             </div>
         </div>
