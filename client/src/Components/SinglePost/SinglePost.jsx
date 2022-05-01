@@ -2,9 +2,10 @@ import "./SinglePost.css"
 import {useLocation} from "react-router"
 import {useEffect, useState} from "react"
 import axios from "axios"
+import {Link} from "react-router-dom"
 
 const SinglePost = () => {
-    const location =useLocation ()
+    const location = useLocation ()
     const path = location.pathname.split("/")[2]
     const [singlePost, setSinglePost] = useState({})
 
@@ -21,7 +22,7 @@ const SinglePost = () => {
                 {singlePost.photo && <img src={singlePost.photo} alt="postImg" className="singlePostImage"/>}
                 
                 <h1 className="singlePostTitle">
-                   {singlePost.title}
+                    {singlePost.title}
                     <div className="singlePostEdit">
                         <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
                         <i className="singlePostIcon fa-solid fa-trash-can"></i>
@@ -29,7 +30,11 @@ const SinglePost = () => {
                 </h1>
 
                 <div className="singlePostInfo">
-                    <span className="singlePostAuthor">Author: <b>{singlePost.username}</b></span>
+                    <span className="singlePostAuthor">Author: 
+                    <Link to={`/?user=${singlePost.username}`} className="link">
+                        <b>{singlePost.username}</b>
+                    </Link>
+                    </span>
                     <span className="singlePostDate">{new Date(singlePost.createdAt).toDateString()}</span>
                 </div>
 

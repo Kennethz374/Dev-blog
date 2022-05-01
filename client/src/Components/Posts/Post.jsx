@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Post = ({post}) => {
     return (
         <div className="singlePost">
-            {post.phote &&  <img src={post.photo}
+            {post.photo &&  <img src={post.photo}
            alt="Bootcamp"
            className="postImage"/>}
 
