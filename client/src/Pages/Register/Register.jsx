@@ -9,7 +9,7 @@ const Register = () => {
 	const [password, setPassword] = useState("");
 
 	const handleSubmit = async (e) => {
-		e.preveentDefault();
+		e.preventDefault();
 		const res = await axios.post("/auth/register", {
 			username,
 			email,
@@ -30,17 +30,17 @@ const Register = () => {
 				/>
 				<label htmlFor="">Email</label>
 				<input
-					type="password"
+					type="email"
 					className="registerInput"
 					placeholder="Enter your email..."
-					onChanage={(e) => setEmail(e.target.value)}
+					onChange={(e) => setEmail(e.target.value)}
 				/>
 				<label htmlFor="">Password</label>
 				<input
 					type="password"
 					className="registerInput"
 					placeholder="Enter your password..."
-					onChanage={(e) => setPassword(e.target.value)}
+					onChange={(e) => setPassword(e.target.value)}
 				/>
 				<button className="registerButton" type="submit">
 					Register
