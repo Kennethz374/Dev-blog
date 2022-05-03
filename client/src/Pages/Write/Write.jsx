@@ -18,19 +18,24 @@ const Write = () => {
 		if (file) {
 			const data = new FormData();
 			const filename = Date.now() + file.name;
+			//file name will be different even usering keeeps uploading the same image
 			data.append("name", filename);
 			data.append("file", file);
 			newPost.photo = filename;
 
 			try {
 				await axios.post("/upload", data);
-			} catch (error) {}
+			} catch (error) {
+				console.log(error);
+			}
 		}
 		try {
 			const res = await axios.post("/posts", newPost);
 			window.location.replace("/post/" + res.data._id);
 			//redirect to the new post page
-		} catch (error) {}
+		} catch (error) {
+			console.log(error);
+		}
 	};
 	return (
 		<div className="write">
