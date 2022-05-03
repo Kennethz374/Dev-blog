@@ -1,9 +1,9 @@
-import React from "react";
+import { useContext } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-
+import { Context } from "../../Context/Context";
 const NavBar = () => {
-	const user = false;
+	const { user } = useContext(Context);
 	return (
 		<div className="NavBar_Container">
 			<div className="left">

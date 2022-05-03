@@ -5,11 +5,13 @@ import Write from "./Pages/Write/Write";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import { Context } from "./Context/Context";
 
 import { Routes, Route, Link } from "react-router-dom";
+import { useContext } from "react";
 
 function App() {
-	const user = false;
+	const { user } = useContext(Context);
 	//if no user login
 	return (
 		<div className="App">
