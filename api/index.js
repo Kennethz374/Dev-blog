@@ -7,9 +7,11 @@ const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
+const path = require("path");
 
 dotenv.config();
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 const PORT = 5000;
 
@@ -19,7 +21,7 @@ mongoose
 	.catch((err) => console.log(err));
 
 const storage = multer.diskStorage({
-	deestination: (req, file, cb) => {
+	destination: (req, file, cb) => {
 		cb(null, "images");
 	},
 	//destination to "image" folder

@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 // home page single post layout
 
 const Post = ({ post }) => {
+	const publicFile = "http://localhost:5000/images/";
 	return (
 		<div className="singlePost">
 			{post.photo && (
-				<img src={post.photo} alt="Bootcamp" className="postImage" />
+				<img
+					src={publicFile + post.photo}
+					alt="Bootcamp"
+					className="postImage"
+				/>
 			)}
 
 			<div className="postInfo">
