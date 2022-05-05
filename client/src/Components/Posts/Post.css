@@ -1,5 +1,5 @@
 .singlePost {
-	width: 385px;
+	min-width: 385px;
 	margin: 0px 25px 40px 25px;
 }
 .postImage {

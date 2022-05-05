@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../Context/Context";
 const NavBar = () => {
 	const { user, dispatch } = useContext(Context);
+	const publicFile = "http://localhost:5000/images/";
 	const handleLogout = (e) => {
 		e.preventDefault();
 		dispatch({ type: "LOGOUT" });
@@ -48,7 +49,11 @@ const NavBar = () => {
 			<div className="right">
 				{user ? (
 					<Link to="/profile" className="link">
-						<img src={user.profilePic} alt="avatar" className="right_image" />
+						<img
+							src={publicFile + user.profilePic}
+							alt="avatar"
+							className="right_image"
+						/>
 					</Link>
 				) : (
 					<ul className="centerList">
